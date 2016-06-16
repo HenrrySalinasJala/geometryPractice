@@ -11,14 +11,12 @@ public class Circle extends Shape implements IShape {
     }
 
     public double calculateArea() {
-        double area = 0;
-        area = PI * Math.pow(radio, CIRCLE_FORMULE_VALUE);
+        double area = PI * Math.pow(radio, CIRCLE_FORMULE_VALUE);
         return area;
     }
 
     public double calculatePerimeter() {
-        double perimeter = 0;
-        perimeter = radio * PI * CIRCLE_FORMULE_VALUE;
+        double perimeter = radio * PI * CIRCLE_FORMULE_VALUE;
         return perimeter;
     }
 }
