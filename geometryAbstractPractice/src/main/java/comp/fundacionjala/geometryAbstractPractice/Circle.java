@@ -2,21 +2,18 @@ package comp.fundacionjala.geometryAbstractPractice;
 
 public class Circle extends Shape implements IShape {
 
-    public static final int CIRCLE_FORMULE_VALUE = 2;
-    private double radio;
-    private static final double PI = Math.PI;
+    private static final int CIRCLE_FORMULA_VALUE = 2;
+    private final double radio;
 
     public Circle(double radio) {
         this.radio = radio;
     }
 
     public double calculateArea() {
-        double area = PI * Math.pow(radio, CIRCLE_FORMULE_VALUE);
-        return area;
+        return Math.PI * Math.pow(radio, CIRCLE_FORMULA_VALUE);
     }
 
     public double calculatePerimeter() {
-        double perimeter = radio * PI * CIRCLE_FORMULE_VALUE;
-        return perimeter;
+        return radio * Math.PI * CIRCLE_FORMULA_VALUE;
     }
 }

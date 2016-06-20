@@ -1,29 +1,27 @@
 package comp.fundacionjala.geometryAbstractPractice;
 
-/**
- * Created by HENRRY on 16/06/2016.
- */
 public class Rectangle extends Shape implements IShape {
 
-    public static final int RECTANGLE_FORMULE_VALUE = 2;
-    protected double side;
-    private double shortSide;
+    private static final int RECTANGLE_SIDES = 2;
+    protected double width;
+    private double height;
 
-    public Rectangle(double longSide, double shortSide) {
-        this.side = longSide;
-        this.shortSide = shortSide;
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
     }
-    public Rectangle(double side) {
-        this.side = side;
+
+    public Rectangle(double width) {
+        this.width = width;
+        this.height = width;
     }
 
     public double calculateArea() {
-        return shortSide * side;
+        return height * width;
     }
 
     public double calculatePerimeter() {
-        double perimetro = shortSide * RECTANGLE_FORMULE_VALUE + side * RECTANGLE_FORMULE_VALUE;
-        return perimetro;
+        return height * RECTANGLE_SIDES + width * RECTANGLE_SIDES;
     }
 }
 

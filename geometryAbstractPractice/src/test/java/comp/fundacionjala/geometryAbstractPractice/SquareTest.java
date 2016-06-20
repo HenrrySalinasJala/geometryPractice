@@ -8,8 +8,6 @@ import static org.junit.Assert.assertEquals;
 public class SquareTest {
 
     private Square square;
-    private static final double perimeterExpected = 16;
-    private static final double areaExpected = 16;
 
     @Before
     public void setUp() {
@@ -18,13 +16,13 @@ public class SquareTest {
 
     @Test
     public void testASquareCanCalculateItsPerimeter() {
-
-        assertEquals(perimeterExpected, square.calculatePerimeter(), constant.DELTA);
+        double expectedPerimeter = 16;
+        assertEquals(expectedPerimeter, square.calculatePerimeter(), constant.DELTA);
     }
 
     @Test
     public void testASquareCanCalculateItsArea() {
-
-        assertEquals(areaExpected, square.calculateArea(), constant.DELTA);
+        double expectedArea = 16;
+        assertEquals(expectedArea, square.calculateArea(), constant.DELTA);
     }
 }

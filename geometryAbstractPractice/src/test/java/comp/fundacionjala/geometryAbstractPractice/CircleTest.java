@@ -8,8 +8,6 @@ import static org.junit.Assert.assertEquals;
 public class CircleTest {
 
     private Circle circle;
-    private static final double perimeterExpected = 25.12;
-    private static final double areaExpected = 50.24;
 
     @Before
     public void setUp() {
@@ -18,13 +16,13 @@ public class CircleTest {
 
     @Test
     public void testACircleCanCalculateItsPerimeter() {
-
+        double perimeterExpected = 25.12;
         assertEquals(perimeterExpected, circle.calculatePerimeter(), constant.DELTA);
     }
 
     @Test
     public void testACircleCanCalculateItsArea() {
-
+        double areaExpected = 50.24;
         assertEquals(areaExpected, circle.calculateArea(), constant.DELTA);
     }
 }
