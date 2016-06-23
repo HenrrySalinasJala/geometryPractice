@@ -4,25 +4,30 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static comp.fundacionjala.geometryAbstractPractice.Constant.DELTA;
 
+/**
+ * Tests for {@link Circle}
+ */
 public class CircleTest {
 
-    private Circle circle;
+    private IShape circle;
 
     @Before
     public void setUp() {
-        circle = new Circle(4);
+        final double radio=4;
+        circle = new Circle(radio);
     }
 
     @Test
     public void testACircleCanCalculateItsPerimeter() {
-        double perimeterExpected = 25.12;
-        assertEquals(perimeterExpected, circle.calculatePerimeter(), constant.DELTA);
+        final double perimeterExpected = 25.12;
+        assertEquals("the perimeter obtained does not match with the perimeter expected", perimeterExpected, circle.calculatePerimeter(), DELTA);
     }
 
     @Test
     public void testACircleCanCalculateItsArea() {
-        double areaExpected = 50.24;
-        assertEquals(areaExpected, circle.calculateArea(), constant.DELTA);
+        final double areaExpected = 50.24;
+        assertEquals(areaExpected, circle.calculateArea(), DELTA);
     }
 }

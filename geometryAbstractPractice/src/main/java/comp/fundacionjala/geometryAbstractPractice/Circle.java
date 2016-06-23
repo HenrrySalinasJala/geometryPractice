@@ -1,6 +1,9 @@
 package comp.fundacionjala.geometryAbstractPractice;
 
-public class Circle extends Shape implements IShape {
+import static java.lang.Math.PI;
+import static java.lang.Math.pow;
+
+public class Circle  implements IShape {
 
     private static final int CIRCLE_FORMULA_VALUE = 2;
     private final double radio;
@@ -9,11 +12,17 @@ public class Circle extends Shape implements IShape {
         this.radio = radio;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public double calculateArea() {
-        return Math.PI * Math.pow(radio, CIRCLE_FORMULA_VALUE);
+        return PI * pow(radio, CIRCLE_FORMULA_VALUE);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public double calculatePerimeter() {
-        return radio * Math.PI * CIRCLE_FORMULA_VALUE;
+        return radio * PI * CIRCLE_FORMULA_VALUE;
     }
 }

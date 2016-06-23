@@ -1,6 +1,6 @@
 package comp.fundacionjala.geometryAbstractPractice;
 
-public class Rectangle extends Shape implements IShape {
+public class Rectangle implements IShape {
 
     private static final int RECTANGLE_SIDES = 2;
     protected double width;
@@ -10,18 +10,17 @@ public class Rectangle extends Shape implements IShape {
         this.width = width;
         this.height = height;
     }
-
-    public Rectangle(double width) {
-        this.width = width;
-        this.height = width;
-    }
-
+    /**
+     * {@inheritDoc}
+     */
     public double calculateArea() {
         return height * width;
     }
-
+    /**
+     * {@inheritDoc}
+     */
     public double calculatePerimeter() {
-        return height * RECTANGLE_SIDES + width * RECTANGLE_SIDES;
+        return RECTANGLE_SIDES * (height + width);
     }
 }
 
