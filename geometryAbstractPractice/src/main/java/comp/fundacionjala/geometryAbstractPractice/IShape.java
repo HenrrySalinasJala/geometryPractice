@@ -1,8 +1,5 @@
 package comp.fundacionjala.geometryAbstractPractice;
 
-/**
- * @author HENRRY
- */
 public interface IShape {
 
     /**
