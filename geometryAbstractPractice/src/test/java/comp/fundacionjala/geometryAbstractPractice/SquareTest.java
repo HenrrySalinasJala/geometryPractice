@@ -12,8 +12,8 @@ public class SquareTest {
 
     @Before
     public void setUp() {
-        final int size = 4;
-        square = new Square(size);
+        final int side = 4;
+        square = new Square(side);
     }
 
     @Test

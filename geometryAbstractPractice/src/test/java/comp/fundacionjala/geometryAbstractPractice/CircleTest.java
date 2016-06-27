@@ -3,8 +3,8 @@ package comp.fundacionjala.geometryAbstractPractice;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
 import static comp.fundacionjala.geometryAbstractPractice.Constant.DELTA;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Tests for {@link Circle}
@@ -15,7 +15,7 @@ public class CircleTest {
 
     @Before
     public void setUp() {
-        final double radio=4;
+        final double radio = 4;
         circle = new Circle(radio);
     }
 

@@ -4,9 +4,9 @@ public class Rectangle implements IShape {
 
     private static final int RECTANGLE_SIDES = 2;
 
-    protected double width;
+    private final double width;
 
-    private double height;
+    private final double height;
 
     public Rectangle(double width, double height) {
         this.width = width;
